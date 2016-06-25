@@ -7,31 +7,14 @@ wordpress_sites:
     site_hosts:
       - hoppyx.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:example/example.com.git # replace with your Git repo URL
-    repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
+    repo: https://jerome_toole@bitbucket.org/jerome_toole/hoppyx-trellis.git # replace with your Git repo URL
+    repo_subtree_path: hoppy-x # relative path to your Bedrock/WP directory in your repo
     branch: master
-    multisite:
-      enabled: false
-    ssl:
-      enabled: false
-      provider: letsencrypt
-    cache:
-      enabled: false
-
-# Documentation: https://roots.io/trellis/docs/local-development-setup/
-# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
-# Define accompanying passwords/secrets in group_vars/development/vault.yml
-
-wordpress_sites:
-  hoppyx.com:
-    site_hosts:
-      - hoppyx.com
-    local_path: ../hoppyx # path targeting local Bedrock site directory (relative to Ansible root)
     admin_email: admin@hoppyx.com
     multisite:
       enabled: false
     ssl:
       enabled: false
-      provider: self-signed
+      provider: letsencrypt
     cache:
       enabled: false
