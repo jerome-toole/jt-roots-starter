@@ -3,7 +3,7 @@
 # Define accompanying passwords/secrets in group_vars/production/vault.yml
 
 wordpress_sites:
-  example.com:
+  hoppyx.com:
     site_hosts:
       - hoppyx.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
