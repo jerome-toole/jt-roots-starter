@@ -1,0 +1,38 @@
+section.widget_search {
+  @include outer-container
+}
+
+form.search-form {
+  @include span-columns(12);
+  float: right;
+  @include media($phablet) {
+    @include span-columns(6);
+    @include shift(6);
+  }
+  margin: 1em;
+  .hide {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
+  }
+  .input-group {
+    @include outer-container;
+    button {
+      color: black;
+      border-bottom: 0;
+      overflow: hidden;
+      cursor: pointer;
+      font-size: 40px;
+      width: 40px;
+      height: 40px;
+      @extend .dashicons;
+      @extend .dashicons-search;
+    }
+    input.search-field {
+      width: calc(100% - 7vw);
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "tinymce.css": {
+      "files": [
+        "styles/tinymce.scss"
+      ]
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "vendor.js": {
+      "vendor": [
+        "assets/scripts/vendor/modernizr.custom.js",
+        "assets/scripts/vendor/jquery.detectSwipe.js",
+        "assets/scripts/vendor/featherlight.min.js",
+        "assets/scripts/vendor/featherlight.gallery.js",
+        "assets/scripts/vendor/parallax.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    }
+  },
+  "config": {
+    "devUrl": "http://hoppyx.dev"
+  }
+}

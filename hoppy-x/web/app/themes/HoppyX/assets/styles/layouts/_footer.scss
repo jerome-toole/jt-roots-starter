@@ -1,0 +1,57 @@
+footer {
+  $base-spacing: 1.5em !default;
+  $action-color: #477DCA !default;
+  $footer-background: $light-gray;
+  $footer-color: $dark-gray;
+  $footer-link-color: transparentize($footer-color, 0.4);
+  $footer-disclaimer-color: transparentize($footer-color, 0.4);
+
+  background: $footer-background;
+  width: 100%;
+  height: $footer-height--narrow;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  @include row;
+
+  @include media($phone) {
+    height: $footer-height--wide;
+  }
+
+  section {
+    background: $footer-background;
+    display: table;
+    height: 100%;
+    &:nth-of-type(1) {
+      margin-right: 1em;
+      display: table;
+      float: left;
+      margin-bottom: 0;
+      label {
+        display: table-cell;
+        vertical-align: middle;
+        margin-bottom: 0;
+      }
+    }
+    &:nth-of-type(2) {
+      @include span-columns(6);
+      text-align: right;
+      display: table;
+      float: right;
+      .textwidget {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  label {
+    color: $footer-link-color;
+    text-decoration: none;
+    display: inline-block;
+
+    &:focus,
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+}

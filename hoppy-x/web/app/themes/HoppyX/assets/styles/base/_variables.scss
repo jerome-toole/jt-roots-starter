@@ -1,0 +1,77 @@
+// Typography
+$gill: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+
+$base-font-family: $gill;
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 0px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+$reading-width: 37em;
+
+// Colors
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$off-white: #FBFBFB;
+$white: white;
+$black: black;
+
+$blue : #2B67E4;
+$lime : #B3DB48;
+$orange : #FF7656;
+$yellow : #FFD900;
+$pink : #FF939F;
+$lightblue: #e9f0f5;
+
+// Font Colors
+$base-font-color: $black;
+$action-color: $orange;
+
+// Border
+$base-border-color: $black;
+$base-border: 4px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 1px rgba(#000, 0.08);
+$form-box-shadow-focus: $form-box-shadow, 3px 3px 0px rgba(0, 0, 0, 0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+// Screen Widths
+$phone : 27.5rem;
+
+$phablet : 40rem;
+
+$small-tablet : 50rem;
+
+$tablet : 60rem;
+
+$laptop : 80rem;
+
+$desktop : 90rem;
+
+// Footer Nav
+$footer-height--wide: 5.5em;
+$footer-height--narrow: 7em;
+
+//Paths
+
+// Glyphicons font path
+$icon-font-path:    "../images/fonts/";
+$image-path:        "../images/";

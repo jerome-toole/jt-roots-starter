@@ -1,0 +1,160 @@
+//Post loop and single post
+
+article.hentry {
+  header {
+    @include row();
+  }
+  .entry-title {
+    text-decoration: underline;
+    font-weight: normal;
+  }
+  .entry-image {
+    margin-bottom: 1em;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  .entry-meta {
+    time,
+    span {
+      font-style: italic;
+    }
+  }
+}
+
+
+.single-post {
+  article {
+    .header__content,
+    .entry-content {
+      @include media($tablet) {
+        max-width: $phablet;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+
+    .entry-content {
+      margin-bottom: 2.5em;
+    }
+
+    img {
+      @include fill-parent();
+      display: block;
+      margin: 0 auto;
+    }
+
+    .entry-title,
+    blockquote {
+      @include media($tablet) {
+        margin-left: -2em;
+      }
+      margin: 1em .8em;
+    }
+
+    .entry-title {
+      text-align: left;
+      text-transform: none;
+      // margin: 1em 0;
+    }
+
+    blockquote {
+      font-size: $base-font-size*1.8;
+      p {
+        padding: 0;
+      }
+    }
+
+    .caption {
+      font-size: $base-font-size*0.9;
+      text-decoration: none;
+      margin-top: -1px;
+      @include media($tablet) {
+        @include shift(0);
+        @include fill-parent();
+      }
+      @include media($large-screen) {
+        @include shift(-4);
+        @include span-columns(4);
+        text-align: center;
+      }
+    }
+  }
+}
+
+.news.post-loop,
+.writings.post-loop,
+.about-hoppy.post-loop {
+  margin-right: auto;
+  margin-left: auto;
+  @include media($tablet) {
+    max-width: 57em;
+  }
+  article.hentry {
+    margin-bottom: 2.5em;
+    .entry-text {
+      @include fill-parent();
+    }
+    .entry-image {
+      @include fill-parent();
+    }
+    @include media($phone) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+    @include media($phablet) {
+      @include span-columns(8);
+      @include shift(2);
+    }
+    @include media($tablet) {
+      @include fill-parent();
+      @include shift(0);
+      max-width: 100%;
+      .entry-image {
+        max-width: 100%;
+        @include span-columns(7);
+        @include omega();
+      }
+      .entry-text {
+        @include span-columns(5);
+        @include omega();
+        padding-left: 1.5em;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      h2 {
+        color: black;
+        font-size: 1.7em;
+        text-align: left;
+        text-transform: none;
+        margin-bottom: .2em;
+      }
+      &:hover h2{
+        color: $action-color;
+      }
+      p {
+        padding: 0;
+        color: $base-font-color;
+      }
+      .entry-summary p {
+        padding: 0;
+        font-size: 1em;
+      }
+      p.entry-meta {
+        font-size: 0.9em;
+      }
+      @include media($tablet) {
+        .entry-summary p {
+          font-size: 1.2em;
+        }
+        h1 {
+          font-size: 1.8em;
+        }
+      }
+    }
+  }
+}
+

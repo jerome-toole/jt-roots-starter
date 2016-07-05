@@ -1,0 +1,220 @@
+.image-gallery {
+  article.hentry {
+    display: inline-block;
+    width: 200px;
+    margin: 10px 5px 10px 5px;
+    vertical-align: top;
+    height: 200px;
+    float: none;
+    > a,
+    > a img {
+      border: none;
+      outline: none;
+      display: block;
+      position: relative;
+    }
+    .entry-image {
+      overflow: hidden;
+      img {
+        filter: brightness(80%);
+        transition: all .35s;
+      }
+      &:before {
+        position: absolute;
+        top: -2px;
+        right: 0;
+        bottom: -2px;
+        left: 0;
+        border-style: solid;
+        border-color: white;
+        border-width: 2px 0;
+        content: '';
+        z-index: 1;
+        opacity: 0;
+      }
+
+      &:before {
+        /* opacity: 0; */
+        @include transition-property(opacity,top,bottom, left,right);
+        @include transition-duration(.35s);
+      }
+
+      &:hover:before {
+        opacity: 1;
+        top: 25%;
+        bottom: 25%;
+        left: 15%;
+        right: 15%;
+      }
+      .entry-image__overlay {
+        background-color: $blue;
+        opacity: 0;
+        mix-blend-mode: screen;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: .35s;
+      }
+      h2 {
+        color: rgba(white,1);
+        text-decoration: none;
+        font-weight: 600;
+        font-style: italic;
+        text-transform: uppercase;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 200px;
+        font-size: 1.2em;
+        padding: .2em;
+        overflow: hidden;
+        transition: all .35s;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        .entry-image__overlay {
+          opacity: 0;
+        }
+        img {
+          filter: brightness(100%);
+          transform: scale(1.05);
+        }
+        h2 {
+        }
+      }
+    }
+  }
+}
+
+.parent-pageid-13 {
+  .page-title {
+    display: inline-block;
+    font-size: 3em;
+    position: absolute;
+    color: white;
+    font-weight: 400;
+    font-size: calc(1.4em + 3vw);
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  figure {
+    width: 325px;
+    display: inline-block;
+    margin: 5px;
+    position: relative;
+    &:hover,
+    &:focus,
+    &:active {
+      img {
+          opacity: .8;
+      }
+      figcaption {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    img, figcaption {
+      @include transition(.5s);
+    }
+  }
+  .featherlight {
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    user-select: none!important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    @include box-pack(center);
+    background: #fff;
+  }
+  .featherlight-content, .featherlight-content img {
+    width: 100%;
+    display: flex;
+    left: 0;
+  }
+  .featherlight-content {
+    position: absolute;
+    min-height: 100%;
+    @include flex-direction(column);
+    border-bottom: 0px;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .featherlight-close {
+      font-size: 2em;
+      line-height: 1.2;
+      width: auto;
+      top: 0.1em;
+      right: 0.2em;
+    }
+    img {
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      margin: auto;
+      padding: 20px;
+    @include box-pack(center);
+      max-height: 100%;
+      position: fixed;
+      top: 0;
+      background-color: #fff;
+    }
+    header {
+      flex: 0;
+      padding: 0 20px;
+      border-top: 1px solid #cdcdcd;
+      display: flex;
+      @include box-pack(justify);
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 80px;
+    }
+    .buttons {
+      cursor: pointer;
+      display: flex;
+      @include box-pack(justify);
+    }
+    .featherlight-next,
+    .featherlight-previous {
+      display:inline-block;
+      position: static;
+      span {
+        display: block;
+        position:static;
+        font-size:80px;
+        line-height:80px;
+        margin-top:0;
+        text-shadow: 0;
+        color: $black;
+      }
+    }
+    .featherlight-next:hover,.featherlight-previous:hover {
+      background:rgba(255,255,255,.25)
+    }
+    .title {
+    }
+    .caption, .keywords {
+      max-height: 100%;
+      overflow: scroll;
+      font-size: 20px;
+    }
+    .keywords {
+    }
+  }
+}

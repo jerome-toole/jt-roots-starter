@@ -1,0 +1,50 @@
+html {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.wrap.container {
+  flex: 1;
+}
+
+main.main {
+  @include outer-container();
+  @include row();
+  @include media($horizontal-bar-mode) {
+    margin-top: $navigation-height;
+  }
+}
+
+.page-title {
+  margin: 2.5em 0;
+  @extend %page-title;
+  @include media($tablet) {
+    display: none;
+  }
+}
+
+.page-content {
+  padding: 0 2%;
+  text-align: center;
+  background-color: white;
+}
+
+header {
+  position: relative;
+  aside.page-quote {
+    max-width: 18em;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    color: #FFF;
+    font-size: 1.6em;
+    text-shadow: rgba(0, 0, 0, 0.34) 0.8px 0.8px 4px;
+  }
+}
+
