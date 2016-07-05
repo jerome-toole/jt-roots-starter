@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5ca18e09e47c58f63dbb198ca91171c4",
-    "content-hash": "67d16ebc9530b59c28a0b1bbfca94670",
+    "hash": "0c851606cc201d0ef4cd71fb367b393b",
+    "content-hash": "462fda44dda95d1f1b44871991641522",
     "packages": [
         {
             "name": "composer/installers",
@@ -526,6 +526,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/media-library-assistant/"
+        },
+        {
+            "name": "wpackagist-plugin/password-protected",
+            "version": "2.0.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/password-protected/",
+                "reference": "tags/2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/password-protected.2.0.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/password-protected/"
         },
         {
             "name": "wpackagist-plugin/regenerate-thumbnails",
