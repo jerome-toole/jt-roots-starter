@@ -43,7 +43,7 @@
         (function() {
           var triggerBttn = $('#js-mobile-menu'),
             overlay = $( 'header.banner' ),
-            closeBttn = $( 'a.overlay-close' );
+            closeBttn = $( 'a.overlay-close' ),
             transEndEventNames = {
               'WebkitTransition': 'webkitTransitionEnd',
               'MozTransition': 'transitionend',

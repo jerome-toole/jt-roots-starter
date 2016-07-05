@@ -25,9 +25,9 @@
     "vendor.js": {
       "vendor": [
         "assets/scripts/vendor/modernizr.custom.js",
-        "assets/scripts/vendor/jquery.detectSwipe.js",
+        "assets/scripts/vendor/jquery.detect_swipe.js",
         "assets/scripts/vendor/featherlight.min.js",
-        "assets/scripts/vendor/featherlight.gallery.js",
+        "assets/scripts/vendor/featherlight.gallery.min.js",
         "assets/scripts/vendor/parallax.js"
       ]
     },
