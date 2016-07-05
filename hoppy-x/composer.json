@@ -32,6 +32,7 @@
       "url": "https://wpackagist.org"
     }
   ],
+  "minimum-stability": "dev",
   "require": {
     "php": ">=5.5",
     "composer/installers": "~1.0.12",
@@ -48,7 +49,9 @@
     "wpackagist-plugin/reveal-ids-for-wp-admin-25":"1.4.6.*",
     "wpackagist-plugin/backwpup":"3.3.*",
     "wpackagist-plugin/relevanssi":"3.5.*",
-    "wpackagist-plugin/woocommerce":"2.6.*"
+    "wpackagist-plugin/woocommerce":"2.6.*",
+    "wp-sync-db/wp-sync-db": "dev-master",
+    "wp-sync-db/wp-sync-db-media-files": "^1.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
