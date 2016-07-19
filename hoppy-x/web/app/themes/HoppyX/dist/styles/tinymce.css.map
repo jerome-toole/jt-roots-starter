@@ -1,0 +1,1 @@
+{"version":3,"sources":["../assets/styles/tinymce.scss"],"names":[],"mappings":"AAAA,aACE,sBAAwB,AACxB,eAAkB,CACnB","file":"tinymce.css","sourcesContent":["body#tinymce {\n  margin: 12px !important;\n  background: white;\n}\n"],"sourceRoot":"assets/styles/"}

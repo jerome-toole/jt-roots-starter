@@ -7,7 +7,7 @@
       get_template_part('templates/scroll-image');
     }
   }
-  if ( get_field('page-quote') ) { ?>
+  if ( get_field('page_quote') ) { ?>
   <aside class="page-quote"><?php the_field('page_quote')?></aside>
   <?php } ?>
 </header>

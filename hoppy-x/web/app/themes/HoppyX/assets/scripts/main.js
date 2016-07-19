@@ -93,6 +93,7 @@
           previousIcon: '«',
           nextIcon: '»',
           galleryFadeIn: 0,
+          galleryFadeOut: 20,
           openSpeed: 0,
           afterOpen: function(event) {
             fl_instance = this.$instance;
@@ -124,11 +125,11 @@
             var caption = this.$currentTarget.attr('data-caption');
 
             var t = "<h1 class='title'>" + title + "</h1>";
-            var k = "<aside class='keywords'>" + keywords + "</aside>";
-            var c = "<p class='caption'>" + caption + "</p>";
-            var b = "<div class='buttons'><span title='previous' class='featherlight-previous'><span>«</span></span><span title='next' class='featherlight-next'><span>»</span></span></div>";
+            var c = "<a class='image-nav__item image-nav__caption' href=''>Caption</a><p class='caption'>" + caption + "</p>";
+            var k = "<a class='image-nav__item image-nav__keywords' href=''>Keywords</a><aside class='keywords'>" + keywords + "</aside>";
+            var b = "<span title='previous' class='featherlight-previous image-nav__item image-nav__previous'><svg style='width:24px;height:24px' viewBox='0 0 24 24'><path fill='#000000' d='M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z'></path></svg></span><span title='next' class='featherlight-next image-nav__item image-nav__next'><svg style='width:24px;height:24px' viewBox='0 0 24 24'><path fill='#000000' d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'></path></svg></span>";
 
-            $(fl_content).append( "<header>" + t + c + k + b + "</header>" );
+            $(fl_content).append( "<header class='image-nav'>" + t + "<div class='image-nav__buttons'>" + c + k + b + "</div>" + "</header>" );
           },
           onResize: function() {
             fl_content = this.$instance.find('.featherlight-content');
@@ -136,7 +137,6 @@
               'height': '',
               'width': '',
               'max-width': '100%',
-              'max-height': '100%',
               'margin': 'auto',
               'overflow': 'auto'});
           },
