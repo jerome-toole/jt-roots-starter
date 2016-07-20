@@ -39,10 +39,7 @@ function setup() {
 
     add_image_size( 'gallery_square', 550, 550, true );
     add_image_size( 'gallery_image', 1600, 1600 );
-
-  // Enable post formats
-  // http://codex.wordpress.org/Post_Formats
-  add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);
+    add_image_size( 'post-header', 2000, 875, true );
 
   // Enable HTML5 markup support
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5

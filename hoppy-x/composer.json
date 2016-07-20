@@ -37,7 +37,7 @@
     "php": ">=5.5",
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.5.2",
+    "johnpbloch/wordpress": "4.5.3",
     "oscarotero/env": "^1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/advanced-custom-fields":"4.4.*",
@@ -47,19 +47,32 @@
     "wpackagist-plugin/media-library-assistant":"2.*",
     "wpackagist-plugin/regenerate-thumbnails":"2.2.*",
     "wpackagist-plugin/reveal-ids-for-wp-admin-25":"1.4.6.*",
+    "wpackagist-plugin/my-eyes-are-up-here":"*",
     "wpackagist-plugin/backwpup":"3.3.*",
     "wpackagist-plugin/relevanssi":"3.5.*",
     "wpackagist-plugin/woocommerce":"2.6.*",
     "wp-sync-db/wp-sync-db": "dev-master",
     "wp-sync-db/wp-sync-db-media-files": "^1.1",
-    "wpackagist-plugin/password-protected": "^2.0"
+    "wpackagist-plugin/password-protected": "^2.0",
+    "wpackagist-plugin/adminimize": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
   },
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "wpackagist-plugin/advanced-custom-fields", "wpackagist-plugin/contact-form-7", "wpackagist-plugin/enhanced-media-library", "wpackagist-plugin/ewww-image-optimizer", "wpackagist-plugin/media-library-assistant", "wpackagist-plugin/regenerate-thumbnails", "wpackagist-plugin/reveal-ids-for-wp-admin-25"],
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin",
+        "wpackagist-plugin/advanced-custom-fields",
+        "wpackagist-plugin/contact-form-7",
+        "wpackagist-plugin/enhanced-media-library",
+        "wpackagist-plugin/ewww-image-optimizer",
+        "wpackagist-plugin/media-library-assistant",
+        "wpackagist-plugin/regenerate-thumbnails",
+        "wpackagist-plugin/reveal-ids-for-wp-admin-25",
+        "wpackagist-plugin/my-eyes-are-up-here",
+        "wpackagist-plugin/adminimize"
+      ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },

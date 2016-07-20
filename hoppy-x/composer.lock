@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0c851606cc201d0ef4cd71fb367b393b",
-    "content-hash": "462fda44dda95d1f1b44871991641522",
+    "hash": "112cda76ffbee6fd4f75f02cf38dafbb",
+    "content-hash": "8e5226154ab0195892dc418c2bf4dd96",
     "packages": [
         {
             "name": "composer/installers",
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "3c90d491bafa3d0a1bd57a7d001da839a08d2f88"
+                "reference": "a3595c5272a6f247228abb20076ed27321e4aae9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/3c90d491bafa3d0a1bd57a7d001da839a08d2f88",
-                "reference": "3c90d491bafa3d0a1bd57a7d001da839a08d2f88",
+                "url": "https://api.github.com/repos/composer/installers/zipball/a3595c5272a6f247228abb20076ed27321e4aae9",
+                "reference": "a3595c5272a6f247228abb20076ed27321e4aae9",
                 "shasum": ""
             },
             "require": {
@@ -107,20 +107,20 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-06-24 07:03:15"
+            "time": "2016-07-05 06:18:20"
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.5.2",
+            "version": "4.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "e992d00a34ea84d55c80023d27d5bcb839069add"
+                "reference": "f5c6f4dd899e6365ddf2752d2705ed1de7e10715"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/e992d00a34ea84d55c80023d27d5bcb839069add",
-                "reference": "e992d00a34ea84d55c80023d27d5bcb839069add",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/f5c6f4dd899e6365ddf2752d2705ed1de7e10715",
+                "reference": "f5c6f4dd899e6365ddf2752d2705ed1de7e10715",
                 "shasum": ""
             },
             "require": {
@@ -144,7 +144,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2016-05-06 18:16:20"
+            "time": "2016-06-21 16:31:21"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -408,17 +408,38 @@
             "time": "2015-01-17 02:23:40"
         },
         {
-            "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "4.4.7",
+            "name": "wpackagist-plugin/adminimize",
+            "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/4.4.7"
+                "url": "https://plugins.svn.wordpress.org/adminimize/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.7.zip",
-                "reference": "tags/4.4.7",
+                "url": "https://downloads.wordpress.org/plugin/adminimize.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/adminimize/",
+            "time": "2016-06-28 15:24:30"
+        },
+        {
+            "name": "wpackagist-plugin/advanced-custom-fields",
+            "version": "4.4.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
+                "reference": "tags/4.4.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.8.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -528,6 +549,27 @@
             "homepage": "https://wordpress.org/plugins/media-library-assistant/"
         },
         {
+            "name": "wpackagist-plugin/my-eyes-are-up-here",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/my-eyes-are-up-here/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/my-eyes-are-up-here.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/my-eyes-are-up-here/",
+            "time": "2016-04-27 10:24:55"
+        },
+        {
             "name": "wpackagist-plugin/password-protected",
             "version": "2.0.3",
             "source": {
@@ -609,16 +651,16 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce",
-            "version": "2.6.2",
+            "version": "2.6.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce/",
-                "reference": "tags/2.6.2"
+                "reference": "tags/2.6.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce.2.6.2.zip",
-                "reference": "tags/2.6.2",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.2.6.3.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -635,12 +677,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "5af4388ad24f8f1c24148502344a915c6acdb9bc"
+                "reference": "e05973af47c51fdcef362bf85ec1ab4e0251221c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/5af4388ad24f8f1c24148502344a915c6acdb9bc",
-                "reference": "5af4388ad24f8f1c24148502344a915c6acdb9bc",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/e05973af47c51fdcef362bf85ec1ab4e0251221c",
+                "reference": "e05973af47c51fdcef362bf85ec1ab4e0251221c",
                 "shasum": ""
             },
             "require": {
@@ -705,7 +747,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2016-07-01 03:39:01"
+            "time": "2016-07-14 23:16:13"
         }
     ],
     "aliases": [],

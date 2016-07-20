@@ -29,6 +29,7 @@ select[multiple] {
   background-color: $base-background-color;
   border: $base-border;
   border-radius: $base-border-radius;
+  border-width: 2px;
   box-shadow: $form-box-shadow;
   box-sizing: border-box;
   font-family: $base-font-family;
@@ -37,19 +38,16 @@ select[multiple] {
   padding: $base-spacing / 3;
   transition: border-color $base-duration $base-timing;
   width: 100%;
-  transition: box-shadow ease-in-out .09s;
-  transition: transform ease-in-out .09s;
+  transition: all 0.30s ease-in-out;
 
   &:hover {
     border-color: shade($base-border-color, 20%);
   }
 
   &:focus {
-    border-color: $action-color;
+    border-color: $black;
     box-shadow: $form-box-shadow-focus;
     outline: none;
-    transform: scale(1.01);
-    transform-origin: 50% 50%;
   }
 
   &:disabled {

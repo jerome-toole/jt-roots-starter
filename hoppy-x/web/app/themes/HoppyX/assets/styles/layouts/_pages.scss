@@ -44,8 +44,16 @@ header {
     left: 5%;
     bottom: 5%;
     color: #FFF;
-    font-size: 1.6em;
+    font-size: 1.3em;
     text-shadow: rgba(0, 0, 0, 0.34) 0.8px 0.8px 4px;
+    display: none;
+    @include media($phablet) {
+      display: inline-block;
+    }
+    @include media($tablet) {
+      display: inline-block;
+      font-size: 1.5em;
+    }
   }
 }
 
