@@ -1,3 +1,5 @@
+$viewer-height : 70px;
+
 .image-gallery {
   article.hentry {
     display: inline-block;
@@ -98,19 +100,23 @@
   .page-title {
     display: inline-block;
     font-size: 3em;
+    margin: 0;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     color: white;
     font-weight: 400;
     font-size: calc(1.4em + 3vw);
-    top: 0;
     left: 0;
     right: 0;
+    z-index:1;
   }
   figure {
-    width: 325px;
+    max-width: 325px;
     display: inline-block;
     margin: 5px;
     position: relative;
+    cursor: pointer;
     &:hover,
     &:focus,
     &:active {
@@ -144,7 +150,7 @@
   }
   .featherlight-content {
     position: absolute;
-    min-height: 100%;
+    height: calc(100% - 63px);
     border-bottom: 0px;
     width: 100%;
     margin: 0;
@@ -165,26 +171,13 @@
       position: absolute;
       left: 0;
       right: 0;
-      max-height: 88%;
+      max-height: 100%;
       position: absolute;
-      top: 45%;
+      top: 50%;
       transform: translateY(-50%);
     }
-    .title {
-      font-weight: normal;
-      font-size: 1em;
-      padding: 0;
-      margin: 0;
-    }
-    .caption, .keywords {
-      max-height: 100%;
-      overflow: scroll;
-      font-size: .8em;
-      display: none;
-      font-weight: 300;
-    }
     .image-nav {
-      padding: 0 20px;
+      height: $viewer-height;
       position: fixed;
       bottom: 0;
       width: 100%;
@@ -193,19 +186,84 @@
       @include align-items(center);
       @include justify-content(space-between);
       font-weight: 300;
+      @include media($phone) {
+        padding: 0 20px;
+      }
       &__buttons {
-        cursor: pointer;
         display: flex;
         @include justify-content(space-between);
         border-left: #cdcdcd 1px solid;
+        .image-nav__item {
+          border-right: #cdcdcd 1px solid;
+          height: $viewer-height;
+        }
+        .image-nav__item a {
+          line-height: $viewer-height;
+        }
       }
       &__item {
-        border-right: #cdcdcd 1px solid;
-        padding: 1em;
+        padding: 0 1em;
+        overflow: scroll;
+        max-height: 100%;
+      }
+      &__item.is-expanded {
+        overflow: visible;
+        position: relative;
+        &:after {
+          content: "";
+          @include arrow(bottom,$medium-grey,10px);
+          position: absolute;
+          bottom: calc(100% - 9px);
+          right: calc(50% - 10px);
+        }
+      }
+      &__next.featherlight-next, &__previous.featherlight-previous {
+        display: none;
+        svg {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        @include media($phone) {
+          display: inline-block;
+        }
       }
       a {
         color: black;
         margin-bottom: 0;
+      }
+      .title {
+        font-weight: normal;
+        font-size: 1em;
+        padding: 0;
+        margin: 0;
+      }
+      .caption, .keywords {
+        display: none;
+        overflow: visible;
+        position: fixed;
+        width: 95%;
+        font-size: 1em;
+        font-weight: 300;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: $viewer-height;
+        background: #fff;
+        padding: .5em 0.9em;
+        box-shadow: 1px 1px 0px $medium-grey;
+        border: 1px solid $medium-grey;
+        @include media($phablet) {
+          position: absolute;
+          right: -1em;
+          left: -13em;
+          bottom: 100%;
+          width: auto;
+          max-width: 20em;
+        }
+      }
+      .keywords {
+        font-size: .9em;
       }
     }
     .featherlight-next,

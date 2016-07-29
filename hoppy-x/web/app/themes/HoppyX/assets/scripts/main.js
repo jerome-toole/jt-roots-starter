@@ -38,6 +38,25 @@
           });
         });
 
+        // Reveals
+
+        $('body').on('click','.reveal-button', function(e) {
+          var allReveals = $('.reveal');
+          if ($(this).parent().hasClass('is-expanded')) {
+            $(this).parent().find('.reveal').toggle();  // apply the toggle to the reveal
+            $(this).parent().find('.reveal').toggleClass('vhs-fade');
+            $(this).parent().toggleClass('is-expanded');
+          } else {
+            allReveals.hide();
+            allReveals.parent().removeClass('is-expanded');
+            allReveals.removeClass('vhs-fade');
+            $(this).parent().find('.reveal').toggle();  // apply the toggle to the reveal
+            $(this).parent().find('.reveal').toggleClass('vhs-fade');
+            $(this).parent().toggleClass('is-expanded');
+          }
+          e.preventDefault();
+        });
+
 
 
         (function() {
@@ -100,11 +119,9 @@
             $('body').on('click','.featherlight-content .featherlight-next',function(e){
               e.stopPropagation();
               fl_instance.trigger("next");
-              console.log('n');
             });
             $('body').on('click','.featherlight-content .featherlight-previous',function(){
               fl_instance.trigger("previous");
-              console.log('p');
             });
           },
           afterContent: function(event) {
@@ -124,9 +141,9 @@
             var keywords = keywords_escaped;
             var caption = this.$currentTarget.attr('data-caption');
 
-            var t = "<h1 class='title'>" + title + "</h1>";
-            var c = "<a class='image-nav__item image-nav__caption' href=''>Caption</a><p class='caption'>" + caption + "</p>";
-            var k = "<a class='image-nav__item image-nav__keywords' href=''>Keywords</a><aside class='keywords'>" + keywords + "</aside>";
+            var t = "<div class='image-nav__item'><h1 class='title'>" + title + "</h1></div>";
+            var c = "<div class='image-nav__item'><a class='image-nav__caption reveal-button' href=''>Caption</a><span class='caption reveal'>" + caption + "</span></div>";
+            var k = "<div class='image-nav__item'><a class='image-nav__keywords reveal-button' href=''>Keywords</a><aside class='keywords reveal'>" + keywords + "</aside></div>";
             var b = "<span title='previous' class='featherlight-previous image-nav__item image-nav__previous'><svg style='width:24px;height:24px' viewBox='0 0 24 24'><path fill='#000000' d='M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z'></path></svg></span><span title='next' class='featherlight-next image-nav__item image-nav__next'><svg style='width:24px;height:24px' viewBox='0 0 24 24'><path fill='#000000' d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'></path></svg></span>";
 
             $(fl_content).append( "<header class='image-nav'>" + t + "<div class='image-nav__buttons'>" + c + k + b + "</div>" + "</header>" );
