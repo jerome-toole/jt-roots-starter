@@ -44,14 +44,11 @@
           var allReveals = $('.reveal');
           if ($(this).parent().hasClass('is-expanded')) {
             $(this).parent().find('.reveal').toggle();  // apply the toggle to the reveal
-            $(this).parent().find('.reveal').toggleClass('vhs-fade');
             $(this).parent().toggleClass('is-expanded');
           } else {
             allReveals.hide();
             allReveals.parent().removeClass('is-expanded');
-            allReveals.removeClass('vhs-fade');
             $(this).parent().find('.reveal').toggle();  // apply the toggle to the reveal
-            $(this).parent().find('.reveal').toggleClass('vhs-fade');
             $(this).parent().toggleClass('is-expanded');
           }
           e.preventDefault();
@@ -102,12 +99,12 @@
       }
     },
     // Gallery pages
-    'parent_pageid_13': {
+    'gallery_page': {
       init: function() {
 
         // JavaScript to be fired on the Gallery pages
         $('section.gallery').featherlightGallery({
-          filter: "a",
+          filter: "a.lightbox-item",
           targetAttr: "data-image",
           previousIcon: '«',
           nextIcon: '»',

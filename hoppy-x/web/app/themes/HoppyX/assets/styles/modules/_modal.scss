@@ -12,9 +12,18 @@
   $modal-padding: 5em;
   $modal-background: $base-background-color;
   $modal-close-color: $black;
+  $modal-close-size--wide: 3.5rem;
+  $modal-close-size--narrow: 3rem;
   $modal-image-height: 135px;
   $modal-image-width: $modal-image-height;
   $modal-trigger-image-width: 300px;
+
+  .ajax-loader {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5em;
+  }
 
   label {
     cursor: pointer;
@@ -32,6 +41,9 @@
     display: inline-block;
     h3 {
       margin-bottom: 0;
+      font-style: italic;
+      font-size: 1.2em;
+      text-transform: uppercase;
     }
   }
 
@@ -60,14 +72,14 @@
   }
 
   .modal-close {
-    font-size: 3.5rem;
+    font-size: $modal-close-size--narrow;
+    width: $modal-close-size--narrow;
+    height: $modal-close-size--narrow;
     background: transparent;
     padding: 0;
-    width: 3.5rem;
-    height: 3.5rem;
+    top: 0;
+    right: 0;
     text-align: center;
-    right: .5rem;
-    top: .5rem;
     overflow: hidden;
     border: none;
     color: $black;
@@ -82,6 +94,11 @@
     @include hover-grow();
     &:hover,&:focus,&:active {
       color: lighten($black,20%);
+    }
+    @include media($phone) {
+      font-size: $modal-close-size--wide;
+      width: $modal-close-size--wide;
+      height: $modal-close-size--wide;
     }
   }
 
@@ -160,11 +177,15 @@
 footer {
   .widget_simple_modal {
     .modal-inner {
-      max-width:900px;
-      width:80%;
+      max-width: 42em;
+      width:95%;
       margin:0 auto;
       max-height: 80%;
-      padding: 2.4em;
+      padding: 1.4em;
+      @include media($phone) {
+        width: 80%;
+        padding: 2.4em;
+      }
     }
 
     form {
@@ -173,32 +194,41 @@ footer {
         margin-right:10px;
       }
 
+      span.your-name,
+      span.your-email,
+      span.your-message {
+        width: 100%;
+        float: none;
+        margin-bottom: $small-spacing;
+      }
 
       input[name="your-name"],
       input[name="your-email"],
       textarea[name="your-message"] {
-        width: 100%;
-        float: none;
         background: $off-white;
         border-width: 2px;
         border-radius: 0;
         padding: 0.5em 0.8em;
         font-size:1em;
         color:#111;
+        margin-bottom: .25em;
       }
 
       textarea[name="your-message"] {
         font-size: 1em;
         height: 8em;
-        margin-bottom: 0;
+        margin-bottom: 0.25em;
       }
 
       input[type="submit"] {
-        font-size:1.6em;
+        font-size:1.2em;
         background: transparent;
         color: $black;
         transition: all ease .02s;
         &:hover, &:active, &:focus {
+        }
+        @include media($phablet) {
+          font-size: 1.6em;
         }
       }
 
@@ -219,15 +249,14 @@ footer {
       }
 
 
-      /* Landscape mobile & down */
       @include media($small-tablet) {
-        input[name="your-name"],
-        input[name="your-email"] {
+        span.your-name,
+        span.your-email {
           width:49%;
           float: left;
         }
 
-        input[name="your-email"] {
+        span.your-email {
           margin-right: 0;
           float: right;
         }

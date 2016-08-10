@@ -34,3 +34,16 @@ function year_shortcode() {
 add_shortcode('year', 'year_shortcode');
 
 add_filter('widget_text', 'do_shortcode');
+
+
+function addto_query() {
+  global $wp_query;
+     // When inside a custom taxonomy archive include attachments
+     if ( is_tax( 'attachment_tag' ) ) {
+         $wp_query->query_vars['post_type'] =  array( 'attachment' );
+         $wp_query->query_vars['post_status'] =  array( null );
+
+        return $wp_query;
+    }
+}
+add_action('parse_query', 'addto_query');

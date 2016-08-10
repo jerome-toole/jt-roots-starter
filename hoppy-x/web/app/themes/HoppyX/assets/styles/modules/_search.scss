@@ -1,14 +1,14 @@
 section.widget_search {
   @include outer-container
+  padding: 0 2%;
+  form.search-form {
+    margin-top: 0;
+  }
 }
 
 form.search-form {
-  @include span-columns(12);
+  width: 97%;
   float: right;
-  @include media($phablet) {
-    @include span-columns(6);
-    @include shift(6);
-  }
   margin: 1em;
   .hide {
     position: absolute;
@@ -19,20 +19,44 @@ form.search-form {
   }
   .input-group {
     @include outer-container;
+    float: right;
     button {
       color: black;
       border-bottom: 0;
-      overflow: hidden;
       cursor: pointer;
-      font-size: 40px;
-      width: 40px;
+      font-size: 1.7em;
+      width: auto;
       height: 40px;
-      @extend .dashicons;
-      @extend .dashicons-search;
+      .search-submit__text {
+        display: none;
+      }
     }
     input.search-field {
-      width: calc(100% - 7vw);
-      float: left;
+      font-size: .9em;
+      width: 10em;
+      margin-right: .3em;
+      padding: .5em .7em;
+      border-radius: 2%;
+      display: inline-block;
+      transition: width .3s ease-in-out;
+      &:active,
+      &:focus {
+        width: 13em;
+      }
+      &::placeholder {
+        color: black;
+        opacity: .8;
+      }
     }
+  }
+}
+
+span.search-term {
+  font-weight: bold;
+  &:before {
+    content: "‘";
+  }
+  &:after {
+    content: "’";
   }
 }

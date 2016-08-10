@@ -1,12 +1,21 @@
 $viewer-height : 70px;
 
-.image-gallery {
+section.gallery {
+  max-width: 85%;
+  margin: auto;
+  @include media($phablet) {
+    max-width: none;
+  }
+}
+
+.image-galleries {
   article.hentry {
     display: inline-block;
-    width: 200px;
+    width: 90%;
+    max-width: 18em;
     margin: 10px 5px 10px 5px;
     vertical-align: top;
-    height: 200px;
+    height: auto;
     float: none;
     > a,
     > a img {
@@ -17,6 +26,7 @@ $viewer-height : 70px;
     }
     .entry-image {
       overflow: hidden;
+      margin-bottom: 0;
       img {
         filter: brightness(80%);
         transition: all .35s;
@@ -70,12 +80,12 @@ $viewer-height : 70px;
         left: 0;
         right: 0;
         bottom: 0;
+        margin-bottom: 0;
         display: flex;
         justify-content: center;
         text-align: center;
         flex-direction: column;
         text-align: center;
-        height: 200px;
         font-size: 1.2em;
         padding: .2em;
         overflow: hidden;
@@ -111,12 +121,69 @@ $viewer-height : 70px;
     right: 0;
     z-index:1;
   }
+}
+
+.search-results, .archive.tax-attachment_tag {
+  .page-title {
+    display: block;
+  }
+  article.search-result-image {
+    max-width: 325px;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 1.2em;
+    .search-result-image__meta {
+      height: 14em;
+      overflow: scroll;
+      padding: 0 .5em;
+      margin-top: .2em;
+      .title {
+        font-weight: 600;
+        margin: 0 0 .5em;
+        font-size: 1em;
+      }
+      .caption {
+        margin-bottom: .5em;
+        display: block;
+      }
+    }
+    .search-result-image__keywords {
+      > a {
+        &:after {
+          content: "\25b8";
+          margin-left: .3em;
+        }
+        color: black;
+        border-bottom: $base-border;
+        border-bottom-width: 1px;
+      }
+      &.is-expanded {
+        > a:after {
+          content: "\25be";
+        }
+      }
+      .keywords {
+        display: none;
+        a {
+          margin-right: .5em;
+        }
+      }
+    }
+  }
+}
+
+.parent-pageid-13,
+.search-results,
+.archive.tax-attachment_tag {
+  .gallery-item {
+    margin: 5px;
+  }
   figure {
     max-width: 325px;
     display: inline-block;
-    margin: 5px;
     position: relative;
     cursor: pointer;
+    margin: 0;
     &:hover,
     &:focus,
     &:active {

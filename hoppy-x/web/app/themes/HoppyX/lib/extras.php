@@ -19,6 +19,16 @@ function body_class($classes) {
   if (Setup\display_sidebar()) {
     $classes[] = 'sidebar-primary';
   }
+  global $post;
+  if ( is_search() || is_tax( 'attachment_tag' ) ) {
+    $classes[] = 'gallery-page';
+  }
+
+  if ( is_page() ) {
+    if ( 13 == $post->post_parent ) {
+      $classes[] = 'gallery-page';
+    }
+  }
 
   return $classes;
 }

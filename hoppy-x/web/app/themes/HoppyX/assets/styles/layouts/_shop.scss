@@ -2,4 +2,16 @@ body.woocommerce {
   ul.products {
     padding: 0 2%;
   }
+  div.product {
+    .woocommerce-tabs ul.tabs li a {
+      font-weight: 600;
+    }
+  }
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+  font-weight: 600;
 }

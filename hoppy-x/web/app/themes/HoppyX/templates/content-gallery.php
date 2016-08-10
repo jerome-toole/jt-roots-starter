@@ -1,4 +1,3 @@
-
 <div class="page-content">
   <section class='gallery' >
 
@@ -40,7 +39,7 @@
       $keywords = join( " ", $att_tags );
     endif; ?>
 
-    <a href="<?php the_permalink(); ?>" data-title="<?php the_title() ?>" data-caption="<?php echo $caption ?>" data-image="<?php echo $image_full[0]; ?>" <?php echo $keywords ? 'data-keywords="'.esc_html( $keywords ).'"': null; ?>">
+    <a href="<?php the_permalink(); ?>" class="lightbox-item" data-title="<?php the_title() ?>" data-caption="<?php echo $caption ?>" data-image="<?php echo $image_full[0]; ?>" <?php echo $keywords ? 'data-keywords="'.esc_html( $keywords ).'"': null; ?>">
       <figure class='gallery-item' >
           <img alt="<?php echo $caption ?>" src="<?php echo $image_thumb[0]; ?>"/>
       </figure>

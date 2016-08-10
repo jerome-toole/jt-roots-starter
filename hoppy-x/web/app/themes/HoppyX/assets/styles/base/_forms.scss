@@ -62,6 +62,7 @@ select[multiple] {
 
 textarea {
   resize: vertical;
+  transition: resize 0s ease;
 }
 
 [type="search"] {
