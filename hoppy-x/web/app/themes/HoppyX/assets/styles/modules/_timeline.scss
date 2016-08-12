@@ -5,7 +5,7 @@
 
 section#timeline { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
-  max-width: 40em;
+  max-width: 37em;
   margin: 0 auto;
   background-color: transparent;
   &:after {
@@ -28,7 +28,7 @@ section#timeline { /* this class is used to give a max-width to the element it i
     background: $black;
   }
 
-  @include media($laptop) {
+  @include media($tablet) {
     max-width: 100%;
     &::before {
       left: 50%;
@@ -38,6 +38,11 @@ section#timeline { /* this class is used to give a max-width to the element it i
   article {
     position: relative;
     margin: 2em 0;
+    float: left;
+    width: 100%;
+    @include media($tablet) {
+      width: 50%;
+    }
     @include clearfix;
 
     div.entry-image,
@@ -53,7 +58,7 @@ section#timeline { /* this class is used to give a max-width to the element it i
       margin-bottom: 0;
     }
 
-    @include media($laptop) {
+    @include media($tablet) {
       margin: 4em 0;
 
       &:first-child {
@@ -77,6 +82,11 @@ section#timeline { /* this class is used to give a max-width to the element it i
       h2 {
         font-size: 2em;
         letter-spacing: 1px;
+      }
+
+      a.read-more span {
+        @extend .dashicons;
+        @extend .dashicons-arrow-right;
       }
 
       p, .cd-read-more, .cd-date {
@@ -127,11 +137,10 @@ section#timeline { /* this class is used to give a max-width to the element it i
         }
       }
 
-      @include media($laptop) {
+      @include media($tablet) {
         margin-left: 0;
         padding: 1.6em;
-        width: 45%;
-
+        width: calc( 100% - 50px);
         &::before {
           top: 24px;
           left: 100%;
@@ -160,24 +169,26 @@ section#timeline { /* this class is used to give a max-width to the element it i
         }
       }
     }
-    @include media($laptop) {
-      &:nth-child(even) header {
+    @include media($tablet) {
+      &:nth-child(even) {
         float: right;
-
-        &::before {
-          top: 24px;
-          left: auto;
-          right: 100%;
-        }
-
-        .cd-read-more {
+        header {
           float: right;
-        }
+          &::before {
+            top: 24px;
+            left: auto;
+            right: 100%;
+          }
 
-        .cd-date {
-          left: auto;
-          right: 122%;
-          text-align: right;
+          .cd-read-more {
+            float: right;
+          }
+
+          .cd-date {
+            left: auto;
+            right: 122%;
+            text-align: right;
+          }
         }
       }
     }
@@ -218,7 +229,7 @@ section#timeline { /* this class is used to give a max-width to the element it i
     background: $orange;
   }
 
-  @include media($laptop) {
+  @include media($tablet) {
     width: 60px;
     height: 60px;
     left: 50%;
@@ -255,7 +266,7 @@ section#timeline { /* this class is used to give a max-width to the element it i
   }
 }
 
-@include media($laptop) {
+@include media($tablet) {
   /* inverse bounce effect on even content blocks */
   .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
     @include animation(cd-bounce-2-inverse .6s);

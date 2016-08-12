@@ -16,7 +16,7 @@
 
   // The Loop
   while ($timeline->have_posts()) : $timeline->the_post();
-    get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format());
+    get_template_part('templates/content', 'timeline');
     endwhile;?>
   </section>
 </div>
