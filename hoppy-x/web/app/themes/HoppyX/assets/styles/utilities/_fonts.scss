@@ -1,19 +1,57 @@
+// /**
+//  * @license
+//  * MyFonts Webfont Build ID 3269274, 2016-08-16T11:22:49-0400
+//  *
+//  * The fonts listed in this notice are subject to the End User License
+//  * Agreement(s) entered into by the website owner. All other parties are
+//  * explicitly restricted from using the Licensed Webfonts(s).
+//  *
+//  * You may obtain a valid license at the URLs below.
+//  *
+//  * Webfont: GillSansNova-Medium by Monotype
+//  * URL: http://www.myfonts.com/fonts/mti/gill-sans-nova/medium/
+//  *
+//  * Webfont: GillSansNova-MediumItalic by Monotype
+//  * URL: http://www.myfonts.com/fonts/mti/gill-sans-nova/medium-italic/
+//  *
+//  * Webfont: GillSansNova-SemiBoldItalic by Monotype
+//  * URL: http://www.myfonts.com/fonts/mti/gill-sans-nova/semibold-italic/
+//  *
+//  *
+//  * License: http://www.myfonts.com/viewlicense?type=web&buildid=3269274
+//  * Licensed pageviews: 250,000
+//  * Webfonts copyright: Copyright 2015 &#x00A9; The Monotype Corporation. All rights reserved.
+//  *
+//  * © 2016 MyFonts Inc
+// */
+
+
+// /* @import must be at top of file, otherwise CSS will not work */
+@import url('//hello.myfonts.net/count/31e29a');
+
+
 @font-face {
-    font-family: 'TWCen';
-    src: url("../fonts/TWCen.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'GillSansNova';
+  font-weight: normal;
+  src: url('../fonts/31E29A_0_0.eot');
+  src: url('../fonts/31E29A_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/31E29A_0_0.woff2') format('woff2'),url('../fonts/31E29A_0_0.woff') format('woff'),url('../fonts/31E29A_0_0.ttf') format('truetype');
 }
 
 
 @font-face {
-    font-family: 'adelle_rgregular';
-    src: url("../fonts/typetogether_adelle-regular-webfont.eot");
-    src: url("../fonts/typetogether_adelle-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/typetogether_adelle-regular-webfont.woff") format("woff"), url("../fonts/typetogether_adelle-regular-webfont.ttf") format("truetype"), url("../fonts/typetogether_adelle-regular-webfont.svg#adelle_rgregular") format("svg");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'GillSansNova';
+  font-weight: normal;
+  font-style: italic;
+  src: url('../fonts/31E29A_1_0.eot');
+  src: url('../fonts/31E29A_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/31E29A_1_0.woff2') format('woff2'),url('../fonts/31E29A_1_0.woff') format('woff'),url('../fonts/31E29A_1_0.ttf') format('truetype');
 }
 
+
 @font-face {
-    font-family: 'Karla', sans-serif;
+  font-family: 'GillSansNova';
+  font-weight: bold;
+  font-style: italic;
+  src: url('../fonts/31E29A_2_0.eot');
+  src: url('../fonts/31E29A_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/31E29A_2_0.woff2') format('woff2'),url('../fonts/31E29A_2_0.woff') format('woff'),url('../fonts/31E29A_2_0.ttf') format('truetype');
 }
+

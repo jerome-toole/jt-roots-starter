@@ -166,6 +166,7 @@ section.gallery {
         display: none;
         a {
           margin-right: .5em;
+          display: inline-block;
         }
       }
     }
@@ -177,6 +178,9 @@ section.gallery {
 .archive.tax-attachment_tag {
   .gallery-item {
     margin: 5px;
+  }
+  aside.gallery-item__keywords {
+    display: none;
   }
   figure {
     max-width: 325px;

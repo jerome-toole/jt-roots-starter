@@ -41,8 +41,9 @@
 
     <a href="<?php the_permalink(); ?>" class="lightbox-item" data-title="<?php the_title() ?>" data-caption="<?php echo $caption ?>" data-image="<?php echo $image_full[0]; ?>" <?php echo $keywords ? 'data-keywords="'.esc_html( $keywords ).'"': null; ?>">
       <figure class='gallery-item' >
-          <img alt="<?php echo $caption ?>" src="<?php echo $image_thumb[0]; ?>"/>
+        <img alt="<?php echo $caption ?>" src="<?php echo $image_thumb[0]; ?>"/>
       </figure>
+      <aside class="gallery-item__keywords"><?php echo get_the_term_list($image_id, 'attachment_tag') ?></aside>
     </a>
 
   <?php endwhile; ?>

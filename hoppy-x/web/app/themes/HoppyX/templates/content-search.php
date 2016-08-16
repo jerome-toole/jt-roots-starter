@@ -19,7 +19,7 @@ $keywords = '';
 
       <div class="search-result-image__keywords">
         <a href target="_blank" class="reveal-button">Keywords</a>
-        <aside class="reveal keywords"><?php echo $terms ?></aside>
+        <div class="reveal keywords"><?php echo $terms ?></div>
       </div>
     </div>
   </article>

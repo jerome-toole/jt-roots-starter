@@ -73,20 +73,33 @@ section#timeline { /* this class is used to give a max-width to the element it i
     header {
       position: relative;
       margin-left: 60px;
-      background: darken($off-white,2.5%);
-      padding: 1em;
-      box-shadow: 0 3px 0 darken($off-white, 5%);
+      padding: 0;
       border-radius: 2px;
+      border: solid 4px black;
       @include clearfix;
 
+
       h2 {
-        font-size: 2em;
+        font-size: 1.8em;
         letter-spacing: 1px;
       }
 
-      a.read-more span {
-        @extend .dashicons;
-        @extend .dashicons-arrow-right;
+      .entry-text {
+        padding: 1em 1em;
+      }
+
+      .entry-image {
+        margin-bottom: 0;
+      }
+
+      a.read-more {
+        span {
+          @extend .dashicons;
+          @extend .dashicons-arrow-right;
+        }
+        &:hover, &:focus, &:active {
+          color: $orange;
+        }
       }
 
       p, .cd-read-more, .cd-date {
@@ -118,7 +131,7 @@ section#timeline { /* this class is used to give a max-width to the element it i
         content: '';
         position: absolute;
         top: 16px;
-        right: 100%;
+        right: calc( 100% + 4px );
         width: 40px;
         border: 2px solid $black;
       }
@@ -139,11 +152,10 @@ section#timeline { /* this class is used to give a max-width to the element it i
 
       @include media($tablet) {
         margin-left: 0;
-        padding: 1.6em;
         width: calc( 100% - 50px);
         &::before {
           top: 24px;
-          left: 100%;
+          left: calc(100% + 4px);
           width: 50px;
         }
 
@@ -177,7 +189,7 @@ section#timeline { /* this class is used to give a max-width to the element it i
           &::before {
             top: 24px;
             left: auto;
-            right: 100%;
+            right: calc( 100% + 4px );
           }
 
           .cd-read-more {
@@ -204,7 +216,6 @@ section#timeline { /* this class is used to give a max-width to the element it i
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px $black, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
 
   img {
     display: block;
