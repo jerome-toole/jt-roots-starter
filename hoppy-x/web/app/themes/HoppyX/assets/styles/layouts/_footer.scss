@@ -6,7 +6,8 @@ footer {
   $footer-link-color: transparentize($footer-color, 0.4);
   $footer-disclaimer-color: transparentize($footer-color, 0.4);
 
-  background: $footer-background;
+  // background: $footer-background;
+  border-top: $footer-background solid 1px;
   width: 100%;
   height: $footer-height--narrow;
   padding-left: 5vw;
@@ -18,7 +19,6 @@ footer {
   }
 
   section {
-    background: $footer-background;
     display: table;
     height: 100%;
     &:nth-of-type(1) {

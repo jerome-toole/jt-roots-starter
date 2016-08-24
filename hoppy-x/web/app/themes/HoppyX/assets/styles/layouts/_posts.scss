@@ -12,8 +12,7 @@ article.hentry {
     margin-bottom: 1em;
   }
   img {
-    width: 100%;
-    display: block;
+
   }
   .entry-meta {
     time,
@@ -37,12 +36,12 @@ article.hentry {
 
     .entry-content {
       margin-bottom: 2.5em;
+      img {
+        width: auto;
+      }
     }
 
     img {
-      @include fill-parent();
-      display: block;
-      margin: 0 auto;
     }
 
     .entry-title,
