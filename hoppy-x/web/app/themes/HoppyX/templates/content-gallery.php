@@ -9,7 +9,7 @@
     'post_mime_type' => 'image',
     'orderby' => 'post_date',
     'order' => 'desc',
-    'posts_per_page' => '30',
+    'posts_per_page' => '50',
     'post_status'    => 'inherit',
     'tax_query' => array(
         array(
@@ -39,12 +39,14 @@
       $keywords = join( " ", $att_tags );
     endif; ?>
 
-    <a href="<?php the_permalink(); ?>" class="lightbox-item" data-title="<?php the_title() ?>" data-caption="<?php echo $caption ?>" data-image="<?php echo $image_full[0]; ?>" <?php echo $keywords ? 'data-keywords="'.esc_html( $keywords ).'"': null; ?>">
-      <figure class='gallery-item' >
-        <img alt="<?php echo $caption ?>" src="<?php echo $image_thumb[0]; ?>"/>
-      </figure>
-      <aside class="gallery-item__keywords"><?php echo get_the_term_list($image_id, 'attachment_tag') ?></aside>
-    </a>
+    <article class="gallery-item">
+      <div class="gallery-item__keywords"><?php echo get_the_term_list($image_id, 'attachment_tag') ?></div>
+      <a href="<?php the_permalink(); ?>" class="lightbox-item" data-title="<?php the_title() ?>" data-caption="<?php echo $caption ?>" data-image="<?php echo $image_full[0]; ?>" <?php echo $keywords ? 'data-keywords="'.esc_html( $keywords ).'"': null; ?>">
+        <figure class='gallery-item' >
+          <img alt="<?php echo $caption ?>" src="<?php echo $image_thumb[0]; ?>"/>
+        </figure>
+      </a>
+    </article>
 
   <?php endwhile; ?>
 

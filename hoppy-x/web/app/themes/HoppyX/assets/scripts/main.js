@@ -1,3 +1,4 @@
+
 /* ========================================================================
  * DOM-based Routing
  * Based on http://goo.gl/EUTi53 by Paul Irish
@@ -135,7 +136,7 @@
 
             var title = this.$currentTarget.attr('data-title');
             var keywords_escaped = this.$currentTarget.attr('data-keywords');
-            var keywords = keywords_escaped;
+            var keywords = this.$currentTarget.parent().find('div.gallery-item__keywords').html();
             var caption = this.$currentTarget.attr('data-caption');
 
             var t = "<div class='image-nav__item'><h1 class='title'>" + title + "</h1></div>";
