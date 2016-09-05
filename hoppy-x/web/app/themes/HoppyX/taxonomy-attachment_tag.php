@@ -1,5 +1,7 @@
 <?php get_template_part('templates/page', 'header'); ?>
+
 <div class="page-content">
+  <?php dynamic_sidebar('sidebar-search'); ?>
 
 <?php if ( have_posts() ) : ?>
 

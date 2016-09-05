@@ -109,6 +109,7 @@
           targetAttr: "data-image",
           previousIcon: '«',
           nextIcon: '»',
+          loading: '<div>loading</div>',
           galleryFadeIn: 0,
           galleryFadeOut: 20,
           openSpeed: 0,
@@ -135,7 +136,6 @@
             fl_content = fl_instance.find('.featherlight-content');
 
             var title = this.$currentTarget.attr('data-title');
-            var keywords_escaped = this.$currentTarget.attr('data-keywords');
             var keywords = this.$currentTarget.parent().find('div.gallery-item__keywords').html();
             var caption = this.$currentTarget.attr('data-caption');
 
