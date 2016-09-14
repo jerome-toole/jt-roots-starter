@@ -23,6 +23,8 @@ sql-dump-*.sql
 # Vendor (e.g. Composer)
 vendor/*
 !vendor/.gitkeep
+!scripts/vendor/*
+!styles/vendor/*
 
 # Node Package Manager
 node_modules
