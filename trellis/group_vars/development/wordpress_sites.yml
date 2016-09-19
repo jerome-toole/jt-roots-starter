@@ -3,16 +3,17 @@
 # Define accompanying passwords/secrets in group_vars/development/vault.yml
 
 wordpress_sites:
-  hoppyx.com:
+  example.com:
     site_hosts:
-      - hoppyx.dev
-    local_path: ../hoppy-x # path targeting local Bedrock site directory (relative to Ansible root)
-    admin_email: admin@hoppyx.dev
+      - canonical: example.dev
+        redirects:
+          - www.example.dev
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: admin@example.dev
     multisite:
       enabled: false
     ssl:
       enabled: false
       provider: self-signed
     cache:
-      enabled: true
-      duration: 10s
+      enabled: false
