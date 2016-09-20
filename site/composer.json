@@ -45,7 +45,7 @@
     "wpackagist-plugin/backwpup":"3.3.*",
     "wp-sync-db/wp-sync-db": "dev-master",
     "wp-sync-db/wp-sync-db-media-files": "^1.1",
-    "wpackagist-plugin/password-protected": "^2.0",
+    "wpackagist-plugin/password-protected": "^2.0"
     // "wpackagist-plugin/contact-form-7":"4.4.*",
     // "wpackagist-plugin/enhanced-media-library":"2.2.*",
     // "wpackagist-plugin/media-library-assistant":"2.*",
