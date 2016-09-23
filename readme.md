@@ -1,5 +1,7 @@
 ## jt-roots-starter
 
+Just Trellis, Bedrock and a Sage based theme with Bourbon, Neat and a few plugins configured.
+
 ### Installation
 1. Create a new project directory: `$ mkdir example.com && cd example.com`
 2. Clone jt-roots-starter: `$ git clone git@github.com:jerome-toole/jt-roots-starter.git . && rm -rf .git`
